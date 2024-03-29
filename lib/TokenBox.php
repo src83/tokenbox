@@ -135,6 +135,8 @@ class TokenBox
         foreach ($this->box as &$line) {
             foreach($line as $k => $v) {
 
+                $v = (string)$v;
+
                 if (strlen($v) !== $this->index) {
                     unset($line[$k]);
                 }
