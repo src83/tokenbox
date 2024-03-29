@@ -1,0 +1,24 @@
+{
+    "name": "src83/tokenbox",
+    "license": "MIT",
+    "type": "project",
+    "description": "Token generator",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "": "/"
+        }
+    },
+    "require": {
+        "smi2/phpclickhouse": "^1.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.9"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

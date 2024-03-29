@@ -1,0 +1,7 @@
+.idea
+.php_cs.cache
+.php-cs-fixer.cache
+rudiments.php
+phpunit.xml
+/vendor
+/var
