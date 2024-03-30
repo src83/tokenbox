@@ -5,7 +5,7 @@
  * $class - полное имя подключаемого класса, включая его namespace.
  */
 spl_autoload_register(static function ($class) {
-    print_r($class); echo "\n";
+
     $file = dirname(__DIR__) . '/' . str_replace('\\', '/', $class) . '.php';
 
     if (file_exists($file)) {
