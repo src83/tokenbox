@@ -2,17 +2,19 @@
 
 namespace src;
 
-use lib\TokenBox;
-use src\Utils\Generator\ConfigProvider;
-use src\Utils\Generator\InputValidator;
+use Src83\TokenBoxCore\lib\TokenBox;
+use Src83\TokenBoxCore\src\Utils\Generator\ConfigProvider;
+use Src83\TokenBoxCore\src\Utils\Generator\InputValidator;
 
-require_once __DIR__ . '/custom_autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 define('TIME_START', microtime(true));
 
 // -----------------------------------------------------------------------------
 
-if (!InputValidator::validateArguments($argv)) { exit(1); }
+if (!InputValidator::validateArguments($argv)) {
+    exit(1);
+}
 
 $configDTO = ConfigProvider::getConfig($argv);
 

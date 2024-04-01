@@ -75,7 +75,7 @@ php src/calc.php 62 10 16LAzd
 
 #### UnitTest калькулятора:
 ```bash
-clear; vendor/bin/phpunit --colors tests
+clear; vendor/bin/phpunit --testdox vendor/src83/tokenbox-core/tests --colors
 ```
 
 
@@ -168,14 +168,14 @@ I | Pow  | Maxs offset |      Ranges [10]       |   Ranges [62]   | Capacity  | 
 ### 2. Проверка кода на соответствие PSR-12 (codeStyle)
 Проверка:
 ```bash
-clear; vendor/bin/php-cs-fixer -vvv check lib
+clear; vendor/bin/php-cs-fixer -vvv check src
+clear; vendor/bin/php-cs-fixer -vvv check vendor/src83/tokenbox-core
 ```
 
 Исправления:
 ```bash
-clear; vendor/bin/php-cs-fixer -vvv fix lib
+clear; vendor/bin/php-cs-fixer -vvv fix src
+clear; vendor/bin/php-cs-fixer -vvv fix vendor/src83/tokenbox-core
 ```
-"lib" - это проверяемая папка. В данном проекте есть ещё папка "src".
 
 ----------------------------------------------------------------------------------------------------------------------
-

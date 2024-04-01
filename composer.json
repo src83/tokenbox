@@ -10,15 +10,18 @@
         }
     },
     "require": {
+        "src83/tokenbox-core": "dev-master",
         "smi2/phpclickhouse": "^1.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "friendsofphp/php-cs-fixer": "^3.9"
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "11.*",
+        "friendsofphp/php-cs-fixer": "^3.52"
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:src83/tokenbox-core.git"
         }
-    }
+    ]
 }

@@ -20,6 +20,14 @@ dbname=tokenbox
 
 #----------------------------------------------------
 
+# Проверка существования файлов
+for file in "$L1" "$L2" "$L3" "$L4" "$L5" "$L6"; do
+    if [ ! -e "$file" ]; then
+        echo "Файл $file не существует."
+        exit 1
+    fi
+done
+
 echo "Up 1..."
 query="INSERT INTO hash_pool_v1 FORMAT CSV"
 cat $L1 | clickhouse-client --host=$host -u $user --password=$pass --database=$dbname --query="$query"

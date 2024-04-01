@@ -21,6 +21,14 @@ time {
 
 clear;
 
+# Проверка существования файлов
+for file in "$L1_in" "$L2_in" "$L3_in" "$L4_in" "$L5_in" "$L6_in"; do
+    if [ ! -e "$file" ]; then
+        echo "Файл $file не существует."
+        exit 1
+    fi
+done
+
 # Проставление номера строки в список хешей
 cat -n $L1_in | awk '{print $1 "," $2}' > $L1_out
 cat -n $L2_in | awk '{print $1 "," $2}' > $L2_out

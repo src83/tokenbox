@@ -15,6 +15,14 @@ files=(
     "$d_txt""box_L6_5000x5000_01.txt"
 )
 
+# Проверка существования файлов
+for file in "${files[@]}"; do
+    if [ ! -e "$file" ]; then
+        echo "Файл $file не существует."
+        exit 1
+    fi
+done
+
 for file in "${files[@]}"; do
     if [ "$(sort -u "$file" | wc -l)" -eq "$(wc -l < "$file")" ]; then
         echo "$file: Дубликатов строк в файле нет."
