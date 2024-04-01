@@ -16,6 +16,25 @@
 
 Предполагается, что есть, по крайней мере запущенный контейнер с PHP и ClickHouse.
 
+## Текущая структура папок
+```bash
+└─ app
+   ├─ bin
+   ├─ data
+   │  ├─ csv
+   │  ├─ storage
+   │  └─ txt
+   ├─ lib
+   ├─ src
+   │  ├─ DTO
+   │  │  ├─ Calc
+   │  │  └─ Generator
+   │  └─ Utils
+   │     ├─ Calc
+   │     └─ Generator
+   ├─ tests
+   └─ vendor
+```
 
 ## Установка
 
