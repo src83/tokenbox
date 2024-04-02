@@ -77,7 +77,7 @@ php src/calc.php 62 10 16LAzd
 ```
 Ответ: 1016132831
 
-### 4. UnitTest калькулятора:
+### 4. UnitTest:
 ```bash
 clear; vendor/bin/phpunit --testdox vendor/src83/tokenbox-core/tests --colors
 ```
