@@ -17,6 +17,8 @@
 
 Предполагается, что есть, по крайней мере запущенный контейнер с PHP и отдельно с ClickHouse.
 
+В проекте используется ядро, подключаемое как зависимость и внешний репозиторий: https://github.com/src83/tokenbox-core
+
 ## Текущая структура папок
 ```bash
 └─ app
@@ -25,16 +27,18 @@
    │  ├─ csv
    │  ├─ storage
    │  └─ txt
-   ├─ lib
-   ├─ src
-   │  ├─ DTO
-   │  │  ├─ Calc
-   │  │  └─ Generator
-   │  └─ Utils
-   │     ├─ Calc
-   │     └─ Generator
-   ├─ tests
    └─ vendor
+      └─ src83
+         └─ tokenbox-core
+            ├─ lib
+            ├─ src
+            │  ├─ DTO
+            │  │  ├─ Calc
+            │  │  └─ Generator
+            │  └─ Utils
+            │     ├─ Calc
+            │     └─ Generator
+            └─ tests
 ```
 
 
